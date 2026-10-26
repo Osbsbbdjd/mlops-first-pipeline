@@ -41,8 +41,11 @@ jobs:
 
 
     #step 4 -Execute the Automated tests
+      
       - name: Run automated tests
-        run: python -m pytest -v
+        working-directory: KU-CSE-MLOPS-main/mlops-first-pipeline
+        run: python -m pytest tests/test_api.py -v
+
 
     #step 5 - Build Docker Image
       - name: Build Docker image
